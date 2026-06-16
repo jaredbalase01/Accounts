@@ -8,11 +8,65 @@
 </head>
 <!DOCTYPE html>
 <style>
-      body{background-image:url("a.jpg");background-color:black}   div{background-image:url("green.jpg");background-color:blue;border-radius:30px;margin:10px 30px;box-shadow: 0px 0px 30px yellow} 
-    h1{color:yellow}
+      body{background-image:url("a.jpg");background-position: 60% 0%} 
+      div{background-image:url("green.jpg");background-position:0% 10%;border-radius:30px;margin:10px 30px;animation: blink-shadow 1s infinite alternate;} 
+      @keyframes blink-shadow {
+            0% {
+                box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+            }
+            10%{
+                box-shadow: 0px 0px 30px 1px violet;
+            }
+            20%{
+                box-shadow: 0px 0px 30px 1px blue;
+            }
+            30%{
+                box-shadow: 0px 0px 30px 1px green;
+            }
+            40%{
+                box-shadow: 0px 0px 30px 1px white;
+            }
+            50%{
+                box-shadow: 0px 0px 30px 1px black;
+            }
+            60%{
+                box-shadow: 0px 0px 30px 1px red;
+            }
+            70%{
+                box-shadow: 0px 0px 30px 1px orange;
+            }
+            80%{
+                box-shadow: 0px 0px 30px 1px grey;
+            }
+            90%{
+                box-shadow: 0px 0px 30px 1px none;
+            }
+            100% {
+                
+                box-shadow: 0px 0px 30px 1px yellow;
+            }} 
+          div:hover{background-position:10% 100%}
+          div:active{
+              background-position:10% 60%;
+          }
+    h1{color:yellow;
+        animation:sca1s 1s infinite alternate ;
+    }
+    @keyframes sca1s{
+        to{transform: scale(1.1);
+        }
+    }
     p{color:white}
     ul{margin:10% 24%}
-    button{border-radius:30px}
+    button{border-radius:30px;
+        animation:but 1s infinite alternate ;
+    }
+    @keyframes but{
+        to{transform: scale(1.1);
+        }
+    }
+    button:hover{transition: width: 50% 3s}
+    
 a{color:white}    #facebook{color:white;background-color:blue;border-color:white}
     #tiktok{color:white;background-color:red;border-color:black}
          #instagram{color:white;background-color:violet;border-color:yellow}
